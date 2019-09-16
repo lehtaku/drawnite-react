@@ -1,0 +1,15 @@
+.messages {
+    height: 350px;
+    border-right: 1px solid rgba(0, 0, 0, 0.125);
+    border-left: 1px solid rgba(0, 0, 0, 0.125);
+    overflow-y: scroll;
+}
+
+.chat-message {
+    border-radius: 0.25rem;
+    margin: 8px !important;
+}
+
+.chat-input {
+    margin: 16px 0;
+}
