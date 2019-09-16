@@ -3,7 +3,6 @@
 # idea
 .DS_Store
 .idea/
-.idea
 
 # dependencies
 /node_modules
