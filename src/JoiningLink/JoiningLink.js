@@ -4,7 +4,7 @@ class JoiningLink extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            linkUrl: 'localhost:3000/' + props.lobbyId
+            linkUrl: 'localhost:3000/game/' + props.gameId
         };
         this.linkEl = React.createRef();
         this.copyToClipboard = this.copyToClipboard.bind(this);

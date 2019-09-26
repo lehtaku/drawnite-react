@@ -1,0 +1,11 @@
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.arrow-icon:hover {
+    -webkit-box-shadow: 0 0 2px 2px rgba(170,170,170,0.25);
+    -moz-box-shadow: 0 0 2px 2px rgba(170,170,170,0.25);
+    box-shadow: 0 0 2px 2px rgba(170,170,170,0.25);
+}

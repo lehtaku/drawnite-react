@@ -3,11 +3,12 @@ import './PageTitle.css'
 
 const PageTitle = () => {
     return (
-        <div>
-            <div className="logo">
-                <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
+        <div className="row">
+            <div className="col-sm page-title">
+                <div className="logo">
+                    <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
+                </div>
             </div>
-            <h4>Pre-Game lobby</h4>
         </div>
     )
 };

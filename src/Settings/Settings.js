@@ -1,17 +1,37 @@
 import React from 'react';
 
-const Settings = () => {
+import ListTitle from "../List/ListTitle/ListTitle";
+import ValueChanger from "../List/ValueChanger/ValueChanger";
+import ListButton from "../List/ListButton/ListButton";
+
+const Settings = (props) => {
+    let settings = { ...props.settings };
+
+    function roundsHandler(rounds) {
+        if (rounds < 1) rounds = 6;
+        if (rounds > 6) rounds = 1;
+        settings.rounds = rounds;
+        props.handler(settings);
+    }
+
+    function roundTimeHandler(drawTime) {
+        if (drawTime < 30) drawTime = 120;
+        if (drawTime > 120) drawTime = 30;
+        settings.drawTime = drawTime;
+        props.handler(settings);
+    }
+
     return(
         <ul className="list-group">
-            <li className="list-group-item list-title active">Game settings</li>
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-                Rounds
-                <span className="badge badge-primary badge-pill">3</span>
-            </li>
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-                Draw time in seconds
-                <span className="badge badge-primary badge-pill"> 60</span>
-            </li>
+            <ListTitle title="Game Settings"/>
+            <ValueChanger value={ settings.rounds }
+                          handler={ roundsHandler }
+                          settingName="Rounds"/>
+            <ValueChanger value={ settings.drawTime }
+                          handler={ roundTimeHandler }
+                          type="selector"
+                          settingName="Draw time in seconds"/>
+            <ListButton handler={ props.startGame }/>
         </ul>
     )
 };

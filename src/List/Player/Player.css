@@ -1,0 +1,24 @@
+.players {
+    padding: 0;
+    margin-bottom: 48px;
+}
+
+.player-name p {
+    margin: 0;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+}
+
+.edit {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.edit-disabled {
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,62 @@
+.toolbar {
+    background-color: #007bff;
+    min-width: 802px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 8px 0;
+    padding: 8px;
+}
+
+.color-btn {
+    width: 36px;
+    height: 36px;
+    margin: 4px 2px;
+}
+
+.tool-btn {
+    height: 36px;
+    width: 36px;
+    margin: 4px 2px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.size-btn {
+    height: 40px;
+    width: 40px;
+    margin: 4px 2px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.size-dot {
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dot-48 {
+    height: 34px;
+    width: 34px;
+}
+
+.dot-32 {
+    height: 28px;
+    width: 28px;
+}
+
+.dot-16 {
+    height: 22px;
+    width: 22px;
+}
+
+.dot-8 {
+    height: 12px;
+    width: 12px;
+}
+
+.dot-2 {
+    height: 4px;
+    width: 4px;
+}

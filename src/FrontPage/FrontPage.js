@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import Axios from "axios";
 
 class FrontPage extends Component {
@@ -7,26 +6,35 @@ class FrontPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: '',
-            lobbyId: ''
+            gameId: ''
         };
-        this.userNameHandler = this.userNameHandler.bind(this);
+
+        this.createPrivateRoom = this.createPrivateRoom.bind(this);
     }
 
-    componentDidMount() {
-        Axios.get('http://localhost:9000/lobby')
-            .then(newGame => this.setState({ lobbyId: newGame.data.id }));
-    }
-
-    userNameHandler(event) {
-        this.setState({ userName: event.target.value })
+    async createPrivateRoom(event) {
+        event.preventDefault();
+        await Axios.get('http://localhost:9000/api/v1/game/new-game')
+            .then(newGame => this.setState({ gameId: newGame.data._id }));
+        this.props.history.push('/game/' + this.state.gameId);
     }
 
     render() {
+
         return (
-            <Link to={ '/' + this.state.lobbyId }>
-                <button type="button" className="btn btn-primary">Create Game</button>
-            </Link>
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm">
+                        <div className="jumbotron">
+                            <h1 className="display-4">Drawnite</h1>
+                            <p className="lead">Draw & Guess game</p>
+                            <hr className="my-4" />
+                            <p>Ready to rock?</p>
+                            <button type="button" onClick={ this.createPrivateRoom } className="btn btn-outline-primary">Create private room</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
