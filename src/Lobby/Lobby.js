@@ -117,26 +117,30 @@ class Lobby extends Component {
         const lobby = (
             <div className="container-fluid">
                 <PageTitle/>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm">
-                            <Players players={ this.state.players }/>
-                            <Settings settings={ this.state.settings }
-                                      handler={ this.emitSettings }
-                                      startGame={ this.changeGameState }
-                                      gameId={ this.state.gameId }/>
-                        </div>
-                        <div className="col-sm">
-                            <Chat messages={ this.state.messages }
-                                  chatRef={ this.chatBox }
-                                  onInput={ this.onChatInput }
-                                  inputValue={ this.state.chat.input }
-                                  newMsg={ this.sendMsg } />
+                <div className="lobby">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm">
+                                <Players players={ this.state.players }/>
+                                <Settings settings={ this.state.settings }
+                                          handler={ this.emitSettings }
+                                          startGame={ this.changeGameState }
+                                          gameId={ this.state.gameId }/>
+                            </div>
+                            <div className="col-sm">
+                                <Chat messages={ this.state.messages }
+                                      chatRef={ this.chatBox }
+                                      onInput={ this.onChatInput }
+                                      inputValue={ this.state.chat.input }
+                                      newMsg={ this.sendMsg } />
+                            </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-sm">
-                            <JoiningLink gameId={this.state.gameId}/>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm">
+                                <JoiningLink gameId={this.state.gameId}/>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -146,21 +150,23 @@ class Lobby extends Component {
         const game = (
             <div className="container-fluid">
                 <PageTitle/>
-                <div className="row">
-                    <div className="col-sm">
-                        <Players players={ this.state.players }/>
-                    </div>
-                    <div className="col-sm">
-                        <Canvas/>
-                        <Toolbar/>
-                    </div>
-                    <div className="col-sm">
-                        <RoundDetails/>
-                        <Chat messages={ this.state.messages }
-                              chatRef={ this.chatBox }
-                              onInput={ this.onChatInput }
-                              inputValue={ this.state.chat.input }
-                              newMsg={ this.sendMsg } />
+                <div className="game">
+                    <div className="row">
+                        <div className="col-sm">
+                            <Players players={ this.state.players }/>
+                        </div>
+                        <div className="col-sm">
+                            <Canvas/>
+                            <Toolbar/>
+                        </div>
+                        <div className="col-sm">
+                            <RoundDetails/>
+                            <Chat messages={ this.state.messages }
+                                  chatRef={ this.chatBox }
+                                  onInput={ this.onChatInput }
+                                  inputValue={ this.state.chat.input }
+                                  newMsg={ this.sendMsg } />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -12,16 +12,15 @@ code {
     monospace;
 }
 
-.col-sm {
+.container {
+  margin: 16px auto;
+}
+
+.game .col-sm {
   margin: 8px;
   padding: 0;
 }
 
-.list-group {
+.game .list-group {
   margin-bottom: 16px;
-}
-
-.page-title {
-  margin: 8px;
-  padding: 0;
 }

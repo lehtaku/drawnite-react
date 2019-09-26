@@ -3,8 +3,9 @@ import $ from 'jquery';
 
 import './Canvas.css'
 
-
 class Canvas extends Component {
+    th
+
     componentDidMount() {
             /*
              * Initializations
