@@ -8,7 +8,7 @@ const ColorButton = (props) => {
     const id = props.bgColor.slice(1);
 
     return (
-        <button className="btn color-btn" type="button" id={id}
+        <button onClick={ props.onClick } className="btn color-btn btn-light" type="button" id={id}
                 style={ styles } />
     )
 };

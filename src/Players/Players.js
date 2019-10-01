@@ -4,6 +4,7 @@ import ListTitle from "../List/ListTitle/ListTitle";
 import Player from "../List/Player/Player";
 
 const Players = (props) => {
+
     const players = props.players.map((player, key) =>
         <Player key={ key }
                 player={ player } />

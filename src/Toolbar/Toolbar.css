@@ -10,13 +10,14 @@
 .color-btn {
     width: 36px;
     height: 36px;
-    margin: 4px 2px;
+    margin: 3px;
+    border: none;
 }
 
 .tool-btn {
     height: 36px;
     width: 36px;
-    margin: 4px 2px;
+    margin: 3px;
     padding: 0;
     vertical-align: middle;
 }
@@ -24,7 +25,7 @@
 .size-btn {
     height: 40px;
     width: 40px;
-    margin: 4px 2px;
+    margin: 3px;
     padding: 0;
     vertical-align: middle;
 }

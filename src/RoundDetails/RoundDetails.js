@@ -8,8 +8,9 @@ const RoundDetails = (props) => {
                 <ListTitle title="Round"/>
                 <li className="list-group-item">
                     <div className="d-flex justify-content-around">
-                        <span>Time: 60</span>
-                        <span>Word: _ _ _ _ _</span>
+                        <span><strong>Time:</strong> 60</span>
+                        <span><strong>Word:</strong> {props.showWord && props.wordToGuess }
+                        </span>
                     </div>
                 </li>
             </ul>
